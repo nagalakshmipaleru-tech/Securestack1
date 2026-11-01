@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureStack | Smart FDR Management</title>
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>SecureStack</h2>
+                <span>Banking Intelligence</span>
+            </div>
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav>
+            <button class="nav-item active" onclick="showPage('dashboard', this)">
+                <span>▦</span> Dashboard
+            </button>
+
+            <button class="nav-item" onclick="showPage('deposits', this)">
+                <span>◈</span> Deposit Portfolio
+            </button>
+
+            <button class="nav-item" onclick="showPage('addDeposit', this)">
+                <span>＋</span> Add New Deposit
+            </button>
+
+            <button class="nav-item" onclick="showPage('vault', this)">
+                <span>▣</span> Secure Document Vault
+            </button>
+
+            <button class="nav-item" onclick="showPage('alerts', this)">
+                <span>🔔</span> Smart Alerts
+                <b class="menu-badge">3</b>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="secure-box">
+                <span>🛡️</span>
+                <div>
+                    <strong>Secure Banking</strong>
+                    <small>Data protected</small>
+                </div>
+            </div>
+
+            <button class="logout-btn">↪ Logout</button>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+
+        <header class="topbar">
+
+            <div class="welcome">
+                <p class="date-text">Saturday, 1 November 2026</p>
+                <h1>Good Morning, Admin 👋</h1>
+                <p>Monitor and manage your security deposits securely.</p>
+            </div>
+
+            <div class="top-actions">
+                <button class="icon-btn">🔍</button>
+
+                <button class="notification-btn" id="NotificationBtn">
+    🔔
+</button>
+
+
+                <div class="user-profile">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Secure Operations</small>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="page-section">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Financial Overview</h2>
+                    <p>Real-time summary of your deposit portfolio</p>
+                </div>
+
+                <button class="primary-btn" onclick="showPage('addDeposit')">
+                    + Add New Deposit
+                </button>
+            </div>
+
+
+            <!-- STATISTICS CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label">TOTAL PORTFOLIO</span>
+                        <span class="stat-icon blue-icon">₹</span>
+                    </div>
+
+                    <h2>₹25,00,000</h2>
+                    <p class="positive">↑ 12.5% <span>vs last month</span></p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label">ACTIVE DEPOSITS</span>
+                        <span class="stat-icon green-icon">✓</span>
+                    </div>
+
+                    <h2>12</h2>
+                    <p class="neutral">All deposits are monitored</p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label">MATURITY ALERTS</span>
+                        <span class="stat-icon orange-icon">!</span>
+                    </div>
+
+                    <h2>03</h2>
+                    <p class="warning-text">Requires your attention</p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label">SECURITY SCORE</span>
+                        <span class="stat-icon purple-icon">🛡</span>
+                    </div>
+
+                    <h2>98<span class="small-number">/100</span></h2>
+                    <p class="positive">Excellent security status</p>
+                </div>
+
+            </div>
+
+
+            <!-- UNIQUE FEATURE: SMART INSIGHT -->
+
+            <div class="smart-insight">
+                <div class="insight-icon">✦</div>
+
+                <div>
+                    <span class="insight-label">SMART PORTFOLIO INSIGHT</span>
+                    <h3>Your portfolio is healthy</h3>
+                    <p>2 deposits will mature within the next 30 days. Review renewal options to avoid service interruption.</p>
+                </div>
+
+                <button onclick="showPage('alerts')">Review Alerts →</button>
+            </div>
+            <!-- BANKING COMMAND CENTER -->
+<div class="command-center">
+
+    <div class="command-info">
+        <span class="live-badge">● SYSTEM LIVE</span>
+        <h2>Banking Command Center</h2>
+        <p>
+            A simple overview showing the current health, security,
+            and renewal status of all security deposits.
+        </p>
+    </div>
+
+    <div class="command-status">
+
+        <div class="status-box">
+            <span class="status-icon">🛡</span>
+            <div>
+                <small>SECURITY STATUS</small>
+                <strong>Protected</strong>
+            </div>
+        </div>
+
+        <div class="status-box">
+            <span class="status-icon">✓</span>
+            <div>
+                <small>VERIFICATION</small>
+                <strong>10 / 12 Complete</strong>
+            </div>
+        </div>
+
+        <div class="status-box">
+            <span class="status-icon">⏳</span>
+            <div>
+                <small>NEXT ACTION</small>
+                <strong>Renew 1 Deposit</strong>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- DEPOSIT JOURNEY TRACKER -->
+<div class="journey-section">
+
+    <div class="journey-header">
+        <div>
+            <span class="section-tag">HOW IT WORKS</span>
+            <h2>Security Deposit Journey</h2>
+            <p>Track how a deposit moves securely through our banking workflow.</p>
+        </div>
+    </div>
+
+    <div class="journey-steps">
+
+        <div class="journey-step completed">
+            <div class="step-number">1</div>
+            <h3>Create Deposit</h3>
+            <p>Enter FDR and deposit details.</p>
+        </div>
+
+        <div class="journey-arrow">→</div>
+
+        <div class="journey-step completed">
+            <div class="step-number">2</div>
+            <h3>Verify</h3>
+            <p>Documents are checked securely.</p>
+        </div>
+
+        <div class="journey-arrow">→</div>
+
+        <div class="journey-step active-step">
+            <div class="step-number">3</div>
+            <h3>Active & Monitored</h3>
+            <p>The system tracks maturity dates.</p>
+        </div>
+
+        <div class="journey-arrow">→</div>
+
+        <div class="journey-step">
+            <div class="step-number">4</div>
+            <h3>Renew or Close</h3>
+            <p>Get alerts before maturity.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+            <div class="dashboard-grid">
+
+                <!-- DEPOSIT TABLE -->
+
+                <div class="panel portfolio-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Recent Security Deposits</h3>
+                            <p>Latest transactions in your portfolio</p>
+                        </div>
+
+                        <button class="text-btn" onclick="showPage('deposits')">
+                            View All →
+                        </button>
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>DEPOSIT ID</th>
+                                    <th>BANK</th>
+                                    <th>AMOUNT</th>
+                                    <th>MATURITY</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>FDR-2026-001</strong>
+                                        <small>Security Deposit</small>
+                                    </td>
+                                    <td>State Bank of India</td>
+                                    <td><strong>₹5,00,000</strong></td>
+                                    <td>15 Dec 2026</td>
+                                    <td><span class="status active-status">● Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>FDR-2026-002</strong>
+                                        <small>Performance Guarantee</small>
+                                    </td>
+                                    <td>HDFC Bank</td>
+                                    <td><strong>₹3,50,000</strong></td>
+                                    <td>10 Nov 2026</td>
+                                    <td><span class="status warning-status">● Expiring Soon</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>FDR-2026-003</strong>
+                                        <small>Security Deposit</small>
+                                    </td>
+                                    <td>ICICI Bank</td>
+                                    <td><strong>₹7,00,000</strong></td>
+                                    <td>28 Jan 2027</td>
+                                    <td><span class="status active-status">● Active</span></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PORTFOLIO HEALTH -->
+
+                <div class="panel health-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Portfolio Health</h3>
+                            <p>Deposit distribution</p>
+                        </div>
+                    </div>
+
+                    <div class="health-score">
+                        <div class="score-circle">
+                            <strong>86%</strong>
+                            <span>Healthy</span>
+                        </div>
+                    </div>
+
+                    <div class="health-list">
+
+                        <div>
+                            <span class="dot active-dot"></span>
+                            <p>Active Deposits</p>
+                            <strong>75%</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot warning-dot"></span>
+                            <p>Expiring Soon</p>
+                            <strong>15%</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot pending-dot"></span>
+                            <p>Under Review</p>
+                            <strong>10%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- UNIQUE MATURITY TIMELINE -->
+
+            <div class="panel timeline-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Maturity Timeline</h3>
+                        <p>Plan your renewals before deposits expire</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item urgent-time">
+                        <div class="timeline-date">10 NOV</div>
+                        <div class="timeline-line"></div>
+                        <strong>FDR-2026-002</strong>
+                        <span>Expires in 9 days</span>
+                    </div>
+
+                    <div class="timeline-item warning-time">
+                        <div class="timeline-date">15 DEC</div>
+                        <div class="timeline-line"></div>
+                        <strong>FDR-2026-001</strong>
+                        <span>Review renewal</span>
+                    </div>
+
+                    <div class="timeline-item safe-time">
+                        <div class="timeline-date">28 JAN</div>
+                        <div class="timeline-line"></div>
+                        <strong>FDR-2026-003</strong>
+                        <span>Active & secure</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- =====================================
+     ADVANCED ANALYTICS SECTION
+===================================== -->
+<div class="advanced-analytics">
+
+    <!-- Section Header -->
+    <div class="analytics-header">
+        <div>
+            <span class="analytics-tag">● LIVE INTELLIGENCE</span>
+            <h2>Portfolio Analytics</h2>
+            <p>Real-time insights into your security deposit portfolio.</p>
+        </div>
+        <button class="analytics-btn">View Full Report →</button>
+    </div>
+
+    <!-- Analytics Cards -->
+    <div class="analytics-grid">
+
+        <!-- Portfolio Growth -->
+        <div class="analytics-card growth-card">
+            <div class="card-top">
+                <div>
+                    <span class="card-label">PORTFOLIO GROWTH</span>
+                    <h3>+12.5%</h3>
+                </div>
+                <div class="analytics-icon">📈</div>
+            </div>
+
+            <div class="chart-bars">
+                <span style="height: 35%"></span>
+                <span style="height: 50%"></span>
+                <span style="height: 42%"></span>
+                <span style="height: 70%"></span>
+                <span style="height: 58%"></span>
+                <span style="height: 88%"></span>
+                <span class="active-bar" style="height: 100%"></span>
+            </div>
+
+            <div class="chart-labels">
+                <small>May</small>
+                <small>Jun</small>
+                <small>Jul</small>
+                <small>Aug</small>
+                <small>Sep</small>
+                <small>Oct</small>
+                <small>Nov</small>
+            </div>
+        </div>
+
+        <!-- Security Health -->
+        <div class="analytics-card security-health">
+            <span class="card-label">SECURITY HEALTH</span>
+
+            <div class="health-score">
+                <div class="score-ring">
+                    <div class="score-inner">
+                        <strong>98</strong>
+                        <small>/100</small>
+                    </div>
+                </div>
+            </div>
+
+            <p class="health-text">Excellent protection status</p>
+        </div>
+
+        <!-- Quick Insights -->
+        <div class="analytics-card quick-insights">
+            <span class="card-label">SMART INSIGHTS</span>
+
+            <div class="insight-row">
+                <span class="insight-dot green"></span>
+                <p><strong>10</strong> deposits verified</p>
+            </div>
+
+            <div class="insight-row">
+                <span class="insight-dot orange"></span>
+                <p><strong>2</strong> require renewal</p>
+            </div>
+
+            <div class="insight-row">
+                <span class="insight-dot purple"></span>
+                <p>Portfolio performing well</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="activity-panel">
+        <div class="activity-title">
+            <div>
+                <span class="analytics-tag">RECENT ACTIVITY</span>
+                <h3>Security Timeline</h3>
+            </div>
+            <button class="view-all-btn">View All →</button>
+        </div>
+
+        <div class="activity-timeline">
+
+            <div class="timeline-event">
+                <div class="timeline-icon success">✓</div>
+                <div>
+                    <strong>Deposit verified successfully</strong>
+                    <p>FDR-2026-003 was verified and secured.</p>
+                </div>
+                <small>Today, 09:15 AM</small>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-icon warning">!</div>
+                <div>
+                    <strong>Maturity reminder generated</strong>
+                    <p>FDR-2026-002 is approaching its maturity date.</p>
+                </div>
+                <small>Yesterday</small>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-icon info">+</div>
+                <div>
+                    <strong>New deposit added</strong>
+                    <p>A new security deposit was added to your portfolio.</p>
+                </div>
+                <small>30 Oct 2026</small>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+        </section>
+
+
+        <!-- ================= DEPOSIT PORTFOLIO ================= -->
+
+        <section id="deposits" class="page-section hidden">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Deposit Portfolio</h2>
+                    <p>Manage all your security deposits in one place.</p>
+                </div>
+
+                <button class="primary-btn" onclick="showPage('addDeposit')">
+                    + Add New Deposit
+                </button>
+            </div>
+
+
+            <div class="panel">
+
+                <div class="search-row">
+                    <input
+    type="text"
+    id="depositSearch"
+    placeholder="Search by Deposit ID or Bank..."
+>
+                    <select id="statusFilter">
+    <option value="all">All Status</option>
+    <option value="verified">Verified</option>
+    <option value="review">Review</option>
+</select>
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table id="depositTable">
+
+                        <thead>
+                            <tr>
+                                <th>DEPOSIT ID</th>
+                                <th>BANK</th>
+                                <th>AMOUNT</th>
+                                <th>MATURITY DATE</th>
+                                <th>VERIFICATION</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>FDR-2026-001</strong></td>
+                                <td>State Bank of India</td>
+                                <td>₹5,00,000</td>
+                                <td>15 Dec 2026</td>
+                                <td><span class="verified">✓ Verified</span></td>
+                                <td><button class="table-btn">View</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>FDR-2026-002</strong></td>
+                                <td>HDFC Bank</td>
+                                <td>₹3,50,000</td>
+                                <td>10 Nov 2026</td>
+                                <td><span class="review">● Review</span></td>
+                                <td><button class="table-btn">View</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>FDR-2026-003</strong></td>
+                                <td>ICICI Bank</td>
+                                <td>₹7,00,000</td>
+                                <td>28 Jan 2027</td>
+                                <td><span class="verified">✓ Verified</span></td>
+                                <td><button class="table-btn">View</button></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD DEPOSIT ================= -->
+
+        <section id="addDeposit" class="page-section hidden">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Add New Security Deposit</h2>
+                    <p>Create a new deposit record and start the verification process.</p>
+                </div>
+            </div>
+
+
+            <div class="form-layout">
+
+                <div class="panel form-panel">
+
+                    <div class="form-section-title">
+                        <span>01</span>
+                        <div>
+                            <h3>Deposit Information</h3>
+                            <p>Enter the primary FDR details</p>
+                        </div>
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label>Organization / Company Name</label>
+                            <input type="text" id="organization" placeholder="Enter organization name">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Select Bank</label>
+                            <select id="bank">
+                                <option value="">Choose a bank</option>
+                                <option>State Bank of India</option>
+                                <option>HDFC Bank</option>
+                                <option>ICICI Bank</option>
+                                <option>Axis Bank</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>FDR / Deposit Number</label>
+                            <input type="text" id="fdrNumber" placeholder="Example: FDR-2026-004">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Deposit Amount</label>
+                            <input type="number" id="amount" placeholder="Enter amount">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Start Date</label>
+                            <input type="date" id="startDate">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Maturity Date</label>
+                            <input type="date" id="maturityDate" onchange="calculateMaturity()">
+                        </div>
+
+                    </div>
+
+
+                    <!-- UNIQUE SMART CALCULATOR -->
+
+                    <div id="maturityResult" class="maturity-result">
+                        📅 Select a maturity date to see the smart timeline.
+                    </div>
+
+
+                    <div class="form-section-title second-title">
+                        <span>02</span>
+                        <div>
+                            <h3>Secure Document Upload</h3>
+                            <p>Upload the FDR document for verification</p>
+                        </div>
+                    </div>
+
+
+                    <div class="upload-area">
+                        <div class="upload-icon">⇧</div>
+                        <h3>Upload FDR Document</h3>
+                        <p>PDF, PNG or JPG • Maximum file size 10 MB</p>
+                        <input type="file" id="documentFile">
+                    </div>
+
+
+                    <button class="primary-btn large-btn" onclick="submitDeposit()">
+                        Submit for Secure Verification →
+                    </button>
+
+                </div>
+
+
+                <!-- SIDE PROCESS PANEL -->
+
+                <div class="process-panel">
+
+                    <div class="panel">
+
+                        <span class="process-label">SECURE PROCESS</span>
+
+                        <h3>How verification works</h3>
+
+                        <div class="process-step">
+                            <div>1</div>
+                            <p><strong>Submit Deposit</strong><br>Enter FDR information securely.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div>2</div>
+                            <p><strong>Document Validation</strong><br>Details are checked for accuracy.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div>3</div>
+                            <p><strong>Secure Approval</strong><br>Verified deposits enter your portfolio.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-note">
+                        🛡️ <strong>Bank-grade security</strong>
+                        <p>Your documents are protected in this prototype's secure workflow.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DOCUMENT VAULT ================= -->
+
+        <section id="vault" class="page-section hidden">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Secure Document Vault</h2>
+                    <p>Centralized and secure access to deposit documents.</p>
+                </div>
+            </div>
+
+
+            <div class="vault-grid">
+
+                <div class="document-card">
+                    <div class="document-icon">📄</div>
+                    <span class="verified">✓ Verified</span>
+                    <h3>FDR-2026-001</h3>
+                    <p>State Bank of India</p>
+                    <small>Uploaded: 15 Jan 2026</small>
+                    <button class="table-btn">View Document</button>
+                </div>
+
+                <div class="document-card">
+                    <div class="document-icon">📄</div>
+                    <span class="verified">✓ Verified</span>
+                    <h3>FDR-2026-003</h3>
+                    <p>ICICI Bank</p>
+                    <small>Uploaded: 28 Feb 2026</small>
+                    <button class="table-btn">View Document</button>
+                </div>
+
+                <div class="document-card">
+                    <div class="document-icon">📄</div>
+                    <span class="review">● Pending Review</span>
+                    <h3>FDR-2026-002</h3>
+                    <p>HDFC Bank</p>
+                    <small>Uploaded: 10 Mar 2026</small>
+                    <button class="table-btn">View Document</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SMART ALERTS ================= -->
+
+        <section id="alerts" class="page-section hidden">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Smart Alerts Center</h2>
+                    <p>Important deposit events that need your attention.</p>
+                </div>
+            </div>
+
+
+            <div class="alert-card high-alert">
+                <div class="alert-symbol">!</div>
+                <div>
+                    <span class="alert-level">HIGH PRIORITY</span>
+                    <h3>FDR-2026-002 is expiring soon</h3>
+                    <p>Your deposit with HDFC Bank will mature shortly. Review renewal options.</p>
+                </div>
+                <button class="table-btn">Review Now</button>
+            </div>
+
+
+            <div class="alert-card medium-alert">
+                <div class="alert-symbol">⏱</div>
+                <div>
+                    <span class="alert-level">REMINDER</span>
+                    <h3>Renewal review recommended</h3>
+                    <p>FDR-2026-001 should be reviewed before its maturity date.</p>
+                </div>
+                <button class="table-btn">View Deposit</button>
+            </div>
+
+
+            <div class="alert-card low-alert">
+                <div class="alert-symbol">✓</div>
+                <div>
+                    <span class="alert-level">COMPLETED</span>
+                    <h3>Document verification successful</h3>
+                    <p>FDR-2026-003 has been verified and secured in the document vault.</p>
+                </div>
+                <button class="table-btn">View Details</button>
+            </div>
+
+        </section>
+
+
+        <!-- SUCCESS TOAST -->
+
+        <div id="toast" class="toast">
+            ✓ Deposit submitted successfully for secure verification!
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
